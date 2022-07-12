@@ -393,3 +393,291 @@ jobs:
         - couchdb
       addons:
         mariadb: '10.0'
+     - dist: jammy
+       virt: vm
+       language: go
+       go:
+       - 1.x
+       - "1.10"
+       - 1.11.x
+       - master
+       arch: amd64
+       script: 
+         - go hello_world.go
+     - dist: jammy
+       virt: lxd
+       language: go
+       go:
+       - 1.x
+       - "1.10"
+       - 1.11.x
+       - master
+       arch: amd64
+       script: 
+         - go hello_world.go
+     - dist: bionic
+       virt: lxd
+       language: go
+       go:
+       - 1.x
+       - "1.10"
+       - 1.11.x
+       - master
+       arch: amd64
+       script: 
+         - go hello_world.go
+     - dist: bionic
+       virt: vm
+       language: go
+       go:
+       - 1.x
+       - "1.10"
+       - 1.11.x
+       - master
+       arch: amd64
+       script: 
+         - go hello_world.go
+     - dist: xenial
+       virt: lxd
+       language: go
+       go:
+       - 1.x
+       - "1.10"
+       - 1.11.x
+       - master
+       arch: amd64
+       script: 
+         - go hello_world.go
+     - dist: xenial
+       virt: vm
+       language: go
+       go:
+       - 1.x
+       - "1.10"
+       - 1.11.x
+       - master
+       arch: amd64
+       script: 
+         - go hello_world.go
+     - dist: focal
+       virt: lxd
+       language: go
+       go:
+       - 1.x
+       - "1.10"
+       - 1.11.x
+       - master
+       arch: amd64
+       script: 
+         - go hello_world.go
+     - dist: focal
+       virt: vm
+       language: go
+       go:
+       - 1.x
+       - "1.10"
+       - 1.11.x
+       - master
+       arch: amd64
+       script: 
+         - go hello_world.go
+     - dist: jammy
+       virt: vm
+       language: php
+       php:
+       - '5.4'
+       - '5.6'
+       - '7.0'
+       - hhvm # on Trusty only
+       - nightly
+       arch: amd64
+     - dist: jammy
+       virt: lxd
+       language: php
+       php:
+       - '5.4'
+       - '5.6'
+       - '7.0'
+       - hhvm # on Trusty only
+       - nightly
+       arch: amd64
+     - dist: xenial
+       virt: lxd
+       language: php
+       php:
+       - '5.4'
+       - '5.6'
+       - '7.0'
+       - hhvm # on Trusty only
+       - nightly
+       arch: amd64
+     - dist: xenial
+       virt: vm
+       language: php
+       php:
+       - '5.4'
+       - '5.6'
+       - '7.0'
+       - hhvm # on Trusty only
+       - nightly
+       arch: amd64
+     - dist: bionic
+       virt: lxd
+       language: php
+       php:
+       - '5.4'
+       - '5.6'
+       - '7.0'
+       - nightly
+       - hhvm # on Trusty only
+       arch: amd64
+     - dist: bionic
+       virt: vm
+       language: php
+       php:
+       - '5.4'
+       - '5.6'
+       - '7.0'
+       - hhvm # on Trusty only
+       - nightly
+       arch: amd64
+     - dist: focal
+       virt: lxd
+       language: php
+       php:
+       - '5.4'
+       - '5.6'
+       - '7.0'
+       - hhvm # on Trusty only
+       - nightly
+       arch: amd64
+     - dist: focal
+       virt: vm
+       language: php
+       php:
+       - '5.4'
+       - '5.6'
+       - '7.0'
+       - hhvm # on Trusty only
+       - nightly
+       arch: amd64
+     - dist: jammy
+       virt: vm
+       language: erlang
+       otp_release:
+         - "23.0.2"
+         - "22.3.4"
+       arch: amd64
+     - dist: jammy
+       virt: lxd
+       language: erlang
+       otp_release:
+         - "23.0.2"
+         - "22.3.4"
+       arch: amd64
+     - dist: xenial
+       virt: vm  
+       language: erlang
+       otp_release:
+         - "23.0.2"
+         - "22.3.4"
+       arch: amd64
+     - dist: xenial
+       virt: lxd
+       language: erlang
+       otp_release:
+         - "23.0.2"
+         - "22.3.4"
+       arch: amd64
+     - dist: bionic
+       virt: vm
+       language: erlang
+       otp_release:
+         - "23.0.2"
+         - "22.3.4"
+       arch: amd64
+     - dist: bionic
+       virt: lxd
+       language: erlang
+       otp_release:
+         - "23.0.2"
+         - "22.3.4"
+       arch: amd64
+     - dist: focal
+       virt: vm
+       language: erlang
+       otp_release:
+         - "23.0.2"
+         - "22.3.4"
+       arch: amd64
+     - dist: focal
+       virt: lxd
+       language: erlang
+       otp_release:
+         - "23.0.2"
+         - "22.3.4"
+       arch: amd64
+     - dist: jammy
+       virt: lxd
+       language: perl
+       perl:
+         - "5.30"
+         - "5.28"
+         - "5.26"
+       arch: amd64
+     - dist: jammy
+       virt: vm
+       language: perl
+       perl:
+         - "5.30"
+         - "5.28"
+         - "5.26"
+       arch: amd64
+     - dist: xenial
+       virt: vm
+       language: perl
+       perl:
+         - "5.30"
+         - "5.28"
+         - "5.26"
+       arch: amd64
+     - dist: xenial
+       virt: lxd
+       language: perl
+       perl:
+         - "5.30"
+         - "5.28"
+         - "5.26"
+       arch: amd64
+     - dist: bionic
+       virt: lxd
+       language: perl
+       perl:
+         - "5.30"
+         - "5.28"
+         - "5.26"
+       arch: amd64
+     - dist: bionic
+       virt: vm
+       language: perl
+       perl:
+         - "5.30"
+         - "5.28"
+         - "5.26"
+       arch: amd64
+     - dist: focal
+       virt: lxd
+       language: perl
+       perl:
+         - "5.30"
+         - "5.28"
+         - "5.26"
+       arch: amd64
+     - dist: xenial
+       virt: vm
+       language: perl
+       perl:
+         - "5.30"
+         - "5.28"
+         - "5.26"
+       arch: amd64
