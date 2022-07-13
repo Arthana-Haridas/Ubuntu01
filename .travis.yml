@@ -403,7 +403,7 @@ jobs:
        - master
        arch: amd64
        script: 
-         - go hello_world.go
+         - go run hello_world.go
      - dist: jammy
        virt: lxd
        language: go
@@ -414,7 +414,7 @@ jobs:
        - master
        arch: amd64
        script: 
-         - go hello_world.go
+         - go run hello_world.go
      - dist: bionic
        virt: lxd
        language: go
@@ -425,7 +425,7 @@ jobs:
        - master
        arch: amd64
        script: 
-         - go hello_world.go
+         - go run hello_world.go
      - dist: bionic
        virt: vm
        language: go
@@ -436,7 +436,7 @@ jobs:
        - master
        arch: amd64
        script: 
-         - go hello_world.go
+         - go run hello_world.go
      - dist: xenial
        virt: lxd
        language: go
@@ -447,7 +447,7 @@ jobs:
        - master
        arch: amd64
        script: 
-         - go hello_world.go
+         - go run hello_world.go
      - dist: xenial
        virt: vm
        language: go
@@ -458,7 +458,7 @@ jobs:
        - master
        arch: amd64
        script: 
-         - go hello_world.go
+         - go run hello_world.go
      - dist: focal
        virt: lxd
        language: go
@@ -469,7 +469,7 @@ jobs:
        - master
        arch: amd64
        script: 
-         - go hello_world.go
+         - go run hello_world.go
      - dist: focal
        virt: vm
        language: go
@@ -480,7 +480,7 @@ jobs:
        - master
        arch: amd64
        script: 
-         - go hello_world.go
+         - go run hello_world.go
      - dist: jammy
        virt: vm
        language: php
@@ -491,6 +491,8 @@ jobs:
        - hhvm # on Trusty only
        - nightly
        arch: amd64
+       script:
+         - php hello_world.php
      - dist: jammy
        virt: lxd
        language: php
@@ -501,6 +503,8 @@ jobs:
        - hhvm # on Trusty only
        - nightly
        arch: amd64
+       script:
+         - php hello_world.php
      - dist: xenial
        virt: lxd
        language: php
@@ -511,6 +515,8 @@ jobs:
        - hhvm # on Trusty only
        - nightly
        arch: amd64
+       script:
+         - php hello_world.php
      - dist: xenial
        virt: vm
        language: php
@@ -521,6 +527,8 @@ jobs:
        - hhvm # on Trusty only
        - nightly
        arch: amd64
+       script:
+         - php hello_world.php
      - dist: bionic
        virt: lxd
        language: php
@@ -531,6 +539,8 @@ jobs:
        - nightly
        - hhvm # on Trusty only
        arch: amd64
+       script:
+         - php hello_world.php
      - dist: bionic
        virt: vm
        language: php
@@ -541,6 +551,8 @@ jobs:
        - hhvm # on Trusty only
        - nightly
        arch: amd64
+       script:
+         - php hello_world.php
      - dist: focal
        virt: lxd
        language: php
@@ -551,6 +563,8 @@ jobs:
        - hhvm # on Trusty only
        - nightly
        arch: amd64
+       script:
+         - php hello_world.php
      - dist: focal
        virt: vm
        language: php
@@ -561,6 +575,8 @@ jobs:
        - hhvm # on Trusty only
        - nightly
        arch: amd64
+       script:
+         - php hello_world.php
      - dist: jammy
        virt: vm
        language: erlang
@@ -681,3 +697,91 @@ jobs:
          - "5.28"
          - "5.26"
        arch: amd64
+     - dist: jammy
+       virt: vm
+       language: python
+       arch: amd64
+       python:
+           - "3.9-dev"  # 3.9 development branch
+           - "nightly"  # nightly build
+       before_install:
+           - yum install -y rpm   
+       script:
+           - python hello_world.py
+     - dist: jammy
+       virt: lxd
+       language: python
+       arch: amd64
+       python:
+           - "3.9-dev"  # 3.9 development branch
+           - "nightly"  # nightly build
+       before_install:
+           - yum install -y rpm   
+       script:
+           - python hello_world.py
+     - dist: xenial
+       virt: lxd
+       language: python
+       arch: amd64
+       python:
+           - "3.9-dev"  # 3.9 development branch
+           - "nightly"  # nightly build
+       before_install:
+           - yum install -y rpm   
+       script:
+           - python hello_world.py
+     - dist: xenial
+       virt: vm
+       language: python
+       arch: amd64
+       python:
+           - "3.9-dev"  # 3.9 development branch
+           - "nightly"  # nightly build
+       before_install:
+           - yum install -y rpm   
+       script:
+           - python hello_world.py
+     - dist: bionic
+       virt: lxd
+       language: python
+       arch: amd64
+       python:
+           - "3.9-dev"  # 3.9 development branch
+           - "nightly"  # nightly build
+       before_install:
+           - yum install -y rpm   
+       script:
+           - python hello_world.py
+     - dist: bionic
+       virt: vm
+       language: python
+       arch: amd64
+       python:
+           - "3.9-dev"  # 3.9 development branch
+           - "nightly"  # nightly build
+       before_install:
+           - yum install -y rpm   
+       script:
+           - python hello_world.py
+     - dist: focal
+       virt: lxd
+       language: python
+       arch: amd64
+       python:
+           - "3.9-dev"  # 3.9 development branch
+           - "nightly"  # nightly build
+       before_install:
+           - yum install -y rpm   
+       script:
+           - python hello_world.py
+     - dist: focal
+       virt: vm
+       language: python
+       arch: amd64
+       python:
+           - "3.9-dev"  # 3.9 development branch
+           - "nightly"  # nightly build
+       before_install:
+           - yum install -y rpm   
+       script:
+           - python hello_world.py
