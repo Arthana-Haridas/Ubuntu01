@@ -562,7 +562,7 @@ jobs:
          - '7.0'
          - hhvm # on Trusty only
          - nightly
-       arch: amd64
+         arch: amd64
          script:
            - php hello_world.php
        - dist: focal
