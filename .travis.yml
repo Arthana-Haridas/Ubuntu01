@@ -30,7 +30,12 @@ jobs:
           - ./hello_world
       - dist: jammy
         virt: vm
+        language: ruby
         arch: amd64
+        rvm:
+        - 2.5 # RVM should install 2.5.9 for RHEL 8
+        - 2.6 # RVM should install 2.6.8 for RHEL 8
+        - 2.7 # should use default pre-installed 2.7.4
         script:
           - ruby hello_world.rb
       - dist: jammy
@@ -79,6 +84,11 @@ jobs:
           - ./hello_world
       - dist: jammy
         virt: lxd
+        language: ruby
+        rvm: 
+        - 2.5 # RVM should install 2.5.9 for RHEL 8
+        - 2.6 # RVM should install 2.6.8 for RHEL 8
+        - 2.7 # should use default pre-installed 2.7.4
         arch: amd64
         script:
           - ruby hello_world.rb
@@ -128,7 +138,12 @@ jobs:
           - ./hello_world
       - dist: bionic
         virt: vm
+        language: ruby
         arch: amd64
+        rvm:
+        - 2.5 # RVM should install 2.5.9 for RHEL 8
+        - 2.6 # RVM should install 2.6.8 for RHEL 8
+        - 2.7 # should use default pre-installed 2.7.4
         script:
           - ruby hello_world.rb
       - dist: bionic
@@ -177,7 +192,12 @@ jobs:
           - ./hello_world
       - dist: bionic
         virt: lxd
+        language: ruby
         arch: amd64
+        rvm:
+        - 2.5 # RVM should install 2.5.9 for RHEL 8
+        - 2.6 # RVM should install 2.6.8 for RHEL 8
+        - 2.7 # should use default pre-installed 2.7.4
         script:
           - ruby hello_world.rb
       - dist: bionic
@@ -226,7 +246,12 @@ jobs:
           - ./hello_world
       - dist: xenial
         virt: vm
+        language: ruby
         arch: amd64
+        rvm:
+        - 2.5 # RVM should install 2.5.9 for RHEL 8
+        - 2.6 # RVM should install 2.6.8 for RHEL 8
+        - 2.7 # should use default pre-installed 2.7.4
         script:
           - ruby hello_world.rb
       - dist: xenial
@@ -275,7 +300,12 @@ jobs:
           - ./hello_world
       - dist: xenial
         virt: lxd
+        language: ruby
         arch: amd64
+        rvm:
+        - 2.5 # RVM should install 2.5.9 for RHEL 8
+        - 2.6 # RVM should install 2.6.8 for RHEL 8
+        - 2.7 # should use default pre-installed 2.7.4
         script:
           - ruby hello_world.rb
       - dist: xenial
@@ -324,7 +354,12 @@ jobs:
           - ./hello_world
       - dist: focal
         virt: vm
+        language: ruby
         arch: amd64
+        rvm:
+        - 2.5 # RVM should install 2.5.9 for RHEL 8
+        - 2.6 # RVM should install 2.6.8 for RHEL 8
+        - 2.7 # should use default pre-installed 2.7.4
         script:
           - ruby hello_world.rb
       - dist: focal
@@ -373,7 +408,12 @@ jobs:
           - ./hello_world
       - dist: focal
         virt: lxd
+        language: ruby
         arch: amd64
+        rvm:
+        - 2.5 # RVM should install 2.5.9 for RHEL 8
+        - 2.6 # RVM should install 2.6.8 for RHEL 8
+        - 2.7 # should use default pre-installed 2.7.4
         script:
           - ruby hello_world.rb
       - dist: focal
